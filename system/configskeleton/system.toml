@@ -1,1 +1,4 @@
 #Folders config file
+[Folders]
+## name folder pair
+# "NAME"="Folder"

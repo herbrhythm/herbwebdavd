@@ -31,6 +31,9 @@ func MustCreateFolder(name string, folder string) http.Handler {
 		LockSystem: webdav.NewMemLS(),
 		Logger: func(r *http.Request, err error) {
 			if err != nil {
+				if os.IsNotExist(err) {
+					return
+				}
 				util.LogError(err)
 			}
 		},
