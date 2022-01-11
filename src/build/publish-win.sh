@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #settings
-binname="herbwebdavd"
-buildername="build-linux.sh"
+binname="herbwebdavd.exe"
+buildername="build-win.sh"
 
 
 if [ -z "$1" ]

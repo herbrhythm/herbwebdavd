@@ -1,9 +1,10 @@
 #!/bin/bash
 
 #settings
-binname="herbwebdavd"
-buildername="build-linux.sh"
-
+winbinname="herbwebdavd.exe"
+winbuildername="build-win.sh"
+linuxbinname="herbwebdavd"
+linuxbuildername="build-linux.sh"
 
 if [ -z "$1" ]
 then 
@@ -21,14 +22,17 @@ cd $path
 
 echo "Publish to $1."
 echo "Building"
-bash ./$buildername
+bash ./$winbuildername
+bash ./$linuxbuildername
 echo "Creating folder $1."
 mkdir $1
 mkdir $1/appdata
 cp ../../appdata/readme.md $1/appdata/readme.md
 echo "Copying bin file."
 mkdir $1/bin
-cp -rpf ../../bin/$binname $1/bin/$binname
+cp -rpf ../../bin/$winbinname $1/bin/$winbinname
+cp -rpf ../../bin/$linuxbinname $1/bin/$linuxbinname
+
 echo "Copying system files."
 cp -rpf ../../system $1/system
 echo "Copying resources files."
