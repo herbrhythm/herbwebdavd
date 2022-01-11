@@ -1,0 +1,9 @@
+# [[Apps]]
+## ID used for http basicauth username
+# ID="testid"
+# # Owner must not be empty
+# Owner="test"
+## Key used for http basicauth password
+# Key="testkey"
+# [Apps.Payloads]
+# roles=""
