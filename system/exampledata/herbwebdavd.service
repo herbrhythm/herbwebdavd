@@ -1,0 +1,13 @@
+[Unit]
+Description=Herbwebdavd
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=on-failure
+RestartSec=5s
+ExecStart=/opt/herbwebdavd/bin/herbwebdavd
+
+[Install]
+WantedBy=multi-user.target

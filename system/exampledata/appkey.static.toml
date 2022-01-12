@@ -1,9 +1,14 @@
-# [[Apps]]
-## ID used for http basicauth username
-# ID="testid"
-# # Owner must not be empty
-# Owner="test"
-## Key used for http basicauth password
-# Key="testkey"
-# [Apps.Payloads]
-# roles=""
+[[Apps]]
+# ID used for http basicauth username
+ID="testid"
+# Owner must not be empty
+Owner="test"
+# Key used for http basicauth password
+Key="testkey"
+[Apps.Payloads]
+# user roles,splite by ,
+# For example root user roles 
+# roles="root"
+# Roles by folder:
+# roles="folder:name=folder1,name=folder2,name=folder%202"
+roles="root"
